@@ -4,7 +4,7 @@
 
 This is an example service developed to showcase the abilities of Common Fate Cloud.
 
-Receipt App helps users store their receipts in the cloud. It's build with a cloud-native architecture and uses AWS S3 to store the receipt files. This app is intended to be deployed as a Docker container on AWS using a service such as AWS EKS.
+Receipt App helps users store their receipts in the cloud. It's built with a cloud-native architecture and uses AWS S3 to store the receipt files. This app is intended to be deployed as a Docker container on AWS using a service such as AWS EKS.
 
 ## Development
 
