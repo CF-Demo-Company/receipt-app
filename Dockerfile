@@ -33,7 +33,7 @@ COPY --from=frontend_builder /app/static/dist ./static/dist
 # add all other folders required for the Go build
 COPY . .
 
-RUN go build -o bin/receipt-app main.go
+RUN go build -ldflags "-X github.com/cf-demo-company/receipt-app/internal/build.Version=$VERSION" -o bin/receipt-app main.go
 
 FROM alpine:3.13.5
 

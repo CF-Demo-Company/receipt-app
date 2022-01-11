@@ -8,6 +8,7 @@ import (
 
 	"log"
 
+	"github.com/cf-demo-company/receipt-app/internal/build"
 	"github.com/cf-demo-company/receipt-app/server"
 )
 
@@ -33,7 +34,7 @@ func run() error {
 		return errors.New("S3_BUCKET_NAME variable was not provided")
 	}
 
-	log.Default().Println("starting Receipt App server...")
+	log.Default().Printf("starting Receipt App server (version = %s)...\n", build.Version)
 
 	storage, err := server.NewStorage(context.Background(), bucketName)
 	if err != nil {
